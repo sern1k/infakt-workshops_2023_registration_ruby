@@ -1,18 +1,9 @@
 class CountElements
-  attr_accessor :array
   def initialize(array)
     @array = array
   end
 
   def perform()
-    result = Hash.new
-    array.each { |element|
-      if result.has_key?(element)
-        result[element] += 1
-      else
-        result[element] = 1
-      end
-      }
-      result
+    @array.tally
   end
 end
